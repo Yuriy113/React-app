@@ -1,0 +1,24 @@
+.title {
+  font-size: 25px;
+  color: #fff;
+  background-color: blue;
+}
+
+.friendsList {
+  display: flex;
+  justify-content: space-around;
+  padding-left: 0;
+  list-style: none;
+}
+
+.listItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 28%;
+  font-size: 13px;
+}
+
+.icon {
+  border-radius: 50%;
+}
