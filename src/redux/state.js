@@ -34,7 +34,6 @@ let state = {
 }
 
 export let addPost = (newPostMessage) => {
-  debugger;
   let newPost = {
     likes: 300,
     message: newPostMessage,
