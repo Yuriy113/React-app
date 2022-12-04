@@ -20,6 +20,8 @@ const App = () => {
         <Routes>
           <Route path="/profile" element={<Profile/>} />
           <Route path="/messages/*" element={<DialogsContainer />} />
+          <Route path="/users/" element={<div>users</div>} />
+
           <Route path="/news" element={<News />} />
           <Route path="/music" element={<Music />} />
           <Route path="/settings" element={<Settings />} />
