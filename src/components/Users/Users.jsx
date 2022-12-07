@@ -1,21 +1,20 @@
-import React from "react";
 import styles from './users.module.css'
-import axios from 'axios'
 
-let Users = (props) => {
+const Users = (props) => {
 
-  const getUsers = () => {
-    if (props.users.length === 0) {
-      axios.get('https://social-network.samuraijs.com/api/1.0/users')
-        .then(response => {
-          console.log(response.data.items)
-          props.setUsers(response.data.items)
-        })
-    }
+  let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize);
+  let pages = [];
+  for (let i = 1; i <= pagesCount; i++) {
+    pages.push(i);
   }
 
   return <div>
-    <button onClick={getUsers}>Get Users</button>
+    <div>
+      {pages.map(p => {
+        return <span onClick={(e) => { props.onPageChanged(p) }} className={props.currentPage === p ? styles.selectedPage : ''}>{p}</span>
+        // return <span className={props.currentPage === p && styles.selectedPage}>{p}</span>
+      })}
+    </div>
     {
       props.users.map(u => <div key={u.id}>
         <span>
@@ -42,7 +41,5 @@ let Users = (props) => {
     }
   </div>
 }
-
-
 
 export default Users;
