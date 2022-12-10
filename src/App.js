@@ -9,19 +9,19 @@ import Settings from './components/Settings/Settings';
 import UsersContainer from './components/Users/UsersContainer';
 import { Routes, Route } from 'react-router-dom';
 
-// const App = (props) => {
 const App = () => {
   return (
     <div className='app-wrapper'>
       <Header />
-      
+
       {/* <Navbar friends={props.state.friendsPage.friends} /> */}
-      <Navbar/>
+      <Navbar />
       <div className='app-wrapper-content'>
         <Routes>
-          <Route path="/profile/*" element={<ProfileContainer/>} />
+          <Route path="/profile/" element={<ProfileContainer/>} />
+          <Route path="/profile/:userId" element={<ProfileContainer/>} />
           <Route path="/messages/*" element={<DialogsContainer />} />
-          <Route path="/users/" element={<UsersContainer/>} />
+          <Route path="/users/" element={<UsersContainer />} />
           <Route path="/news" element={<News />} />
           <Route path="/music" element={<Music />} />
           <Route path="/settings" element={<Settings />} />
