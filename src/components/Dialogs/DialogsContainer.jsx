@@ -3,9 +3,9 @@ import { updateNewMessageBodyCreator, sendMessageCreator } from '../../redux/dia
 import { connect } from 'react-redux';
 
 let mapStateToProps = (state) => {
-  // debugger;
   return {
-    dialogPage: state.dialogPage
+    dialogPage: state.dialogPage,
+    isAuth: state.auth.isAuth
   }
 }
 
