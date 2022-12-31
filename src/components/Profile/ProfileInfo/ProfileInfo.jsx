@@ -1,5 +1,6 @@
 import classes from './ProfileInfo.module.css';
 import Preloader from '../../common/Preloader/Preloader';
+import ProfileStatus from './ProfileStatus';
 
 const ProfileInfo = (props) => {
 
@@ -9,14 +10,14 @@ const ProfileInfo = (props) => {
 
   return (
     <>
-      <div>
+      {/* <div>
         <img src="https://i.etsystatic.com/9674889/r/il/7de7a3/650446643/il_1588xN.650446643_t0iz.jpg" style={{ width: '100%' }} alt="" />
-      </div>
+      </div> */}
 
       <div className={classes.descriptionBlock}>
         <img src={props.profile.photos.large} alt="" />
         <p>{props.profile.fullName}</p>
-        ava+description
+        <ProfileStatus status={'Hello World'}/>
       </div>
     </>
   )
