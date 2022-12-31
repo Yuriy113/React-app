@@ -1,10 +1,7 @@
 import styles from './users.module.css';
 import { NavLink } from 'react-router-dom';
-import { userAPI } from '../../api/api';
-import axios from 'axios';
 
 const Users = (props) => {
-
   let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize);
   let pages = [];
   for (let i = 1; i <= pagesCount; i++) {
